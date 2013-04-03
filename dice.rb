@@ -22,27 +22,42 @@ And the final result state.  In which the roll is complete, and the result is di
 #input
 ##accepts user input
 
-#Hmmm, a better way might be to have the ai function simply call the input and display methods and then those methods can return their result.   
 
 SIDES = 6
 
 def ai() 
-	print "function:ai()\n"
-	display('init')
+	#puts "function:ai()"
+	startScreen = display('start') 
+	readyAnswer = input()	
+	if readyAnswer == "r"
+		secondScreen = display('roll')
+	else 
+		secondScreen = display('noRoll')
+	end
 end
 
+
+
 def display(screen)
-	print "function:display()\n"
-	if screen == 'init'
-		print "Welcome to DICE. Are you ready to roll?\n"
+	#puts "function:display()"
+	if screen == 'start'
+		puts "\nWelcome to DICE. Are you ready to roll?\n(R)oll   (E)xit"
+	elsif screen == 'roll'
+		puts "Okay, about to roll!"
+	elsif screen == 'noRoll'
+		puts "why u no wanna play dice?\n\n"
 	end
 	return
 end
 
+
+
+def input()
+	#puts "function:input()"
+	userInput = gets
+	return userInput.chomp
+end
+
 ai
-
-
-#Just need to figure out how to get the return value from display function...
-
 
 
