@@ -29,7 +29,7 @@ def ai()
 	#puts "function:ai()"
 	startScreen = display('start') 
 	readyAnswer = input()	
-	if readyAnswer == "r"
+	if readyAnswer == "r" || readyAnswer == "R" 
 		secondScreen = display('roll')
 	else 
 		secondScreen = display('noRoll')
@@ -59,5 +59,3 @@ def input()
 end
 
 ai
-
-
