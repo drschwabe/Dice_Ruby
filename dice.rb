@@ -24,14 +24,25 @@ And the final result state.  In which the roll is complete, and the result is di
 
 #Hmmm, a better way might be to have the ai function simply call the input and display methods and then those methods can return their result.   
 
-def ai( executor ) 
-	if executor == "init" then
-		puts "It worked!"
-	end
+SIDES = 6
+
+def ai() 
+	print "function:ai()\n"
+	display('init')
 end
 
-ai "init"
+def display(screen)
+	print "function:display()\n"
+	if screen == 'init'
+		print "Welcome to DICE. Are you ready to roll?\n"
+	end
+	return
+end
 
+ai
+
+
+#Just need to figure out how to get the return value from display function...
 
 
 
