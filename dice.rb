@@ -22,3 +22,16 @@ And the final result state.  In which the roll is complete, and the result is di
 #input
 ##accepts user input
 
+#Hmmm, a better way might be to have the ai function simply call the input and display methods and then those methods can return their result.   
+
+def ai( executor ) 
+	if executor == "init" then
+		puts "It worked!"
+	end
+end
+
+ai "init"
+
+
+
+
